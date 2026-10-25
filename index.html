@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Raunak Kushwaha — Student & Maker</title>
+<meta name="description" content="Student and maker from Kathmandu, Nepal. Robots, websites, self-hosted server.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F4F0">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<nav class="rk-nav">
+  <a href="index.html" class="rk-logo">Raunak Kushwaha</a>
+  <ul class="rk-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="rk-wrap hero-inner">
+    <div>
+      <h1 class="hero-name">Building robots, drones and the servers that run them.</h1>
+      <p class="hero-desc">I'm a student in Kathmandu. I build robots, websites, and a self-hosted server out of my room. Tinkering with electronics and code since Grade 5 — most of what I know I figured out by breaking things.</p>
+      <div class="hero-btns">
+        <a href="#work" class="btn">See my work</a>
+        <a href="https://github.com/0xwrdo" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      </div>
+      <div class="tags"><span class="tag">Arduino</span><span class="tag">Raspberry Pi</span><span class="tag">FPV Drones</span><span class="tag">Linux</span><span class="tag">Next.js</span><span class="tag">ESP32</span></div>
+    </div>
+    <div class="photo-card">
+      <img src="me.jpg" alt="Raunak Kushwaha">
+      <p>FGC 2023, Team Nepal<span>Kathmandu, Nepal</span></p>
+    </div>
+  </div>
+</header>
+
+<section class="work-sec" id="work">
+  <div class="rk-wrap">
+    <div class="sec-hd"><h2 class="sec-hd-label">Work</h2></div>
+    <div class="cards">
+      <article class="card">
+        <img src="assets/argus/build-01.jpg" alt="ARGUS wristband build" loading="lazy">
+        <div class="card-body">
+          <h3>Software / ARGUS</h3>
+          <p>Trekking safety system with an ESP32/MAX30102 wristband, phone GPS and a Next.js/Supabase backend. Built at Build Nepal Hackathon 2026.</p>
+          <a href="argus.html" class="btn">View project</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="assets/rc-car-v2/06-final.jpg" alt="Finished RC car" loading="lazy">
+        <div class="card-body">
+          <h3>Hardware / RC Car</h3>
+          <p>Custom-built remote-controlled vehicle on a BTS7960 driver and FlySky radio. 21V pack, about 2 km range.</p>
+          <a href="rc-car.html" class="btn">View specs</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="drone1.jpg" alt="FPV drone" loading="lazy">
+        <div class="card-body">
+          <h3>Hardware / FPV Drones</h3>
+          <p>Built and tuned from scratch: frame assembly, flight controller setup and power system wiring.</p>
+          <a href="drone.html" class="btn">View build</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="ras.jpg" alt="Raspberry Pi server" loading="lazy">
+        <div class="card-body">
+          <h3>Infrastructure / Self-Hosting</h3>
+          <p>This site runs on a Raspberry Pi through Cloudflare Tunnels and Nginx. No cloud bill.</p>
+          <a href="self-hosting.html" class="btn">View setup</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="nas1%20(1).jpg" alt="Raspberry Pi NAS" loading="lazy">
+        <div class="card-body">
+          <h3>Infrastructure / Pi NAS</h3>
+          <p>Network-attached storage for automated local and remote backups. Headless and always on.</p>
+          <a href="nas.html" class="btn">View NAS</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about-sec" id="about">
+  <div class="rk-wrap">
+    <div class="sec-hd"><h2 class="sec-hd-label">About</h2></div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>I've been taking things apart since Grade 5. That habit took me to the <strong>FIRST Global Challenge 2023</strong>, where I represented Nepal.</p>
+        <p>Most recently I built <strong>ARGUS</strong> with a team of four at Build Nepal Hackathon 2026. I also build FPV drones from scratch, maintain a Pi NAS, and run this site off a Raspberry Pi. Kathmandu power cuts included.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Years building</div></div>
+        <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Competitions</div></div>
+        <div class="stat"><div class="stat-num">2</div><div class="stat-label">International</div></div>
+        <div class="stat"><div class="stat-num">1</div><div class="stat-label">Country represented</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills-sec" id="skills">
+  <div class="rk-wrap">
+    <div class="sec-hd"><h2 class="sec-hd-label">Skills</h2></div>
+    <div class="skill-grid">
+      <div class="skill-item"><h3>Software &amp; Web</h3><div class="tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Next.js</span><span class="tag">Supabase</span></div></div>
+      <div class="skill-item"><h3>Hardware &amp; Robotics</h3><div class="tags"><span class="tag">Arduino</span><span class="tag">Raspberry Pi</span><span class="tag">ESP32</span><span class="tag">FPV Drones</span></div></div>
+      <div class="skill-item"><h3>Infrastructure</h3><div class="tags"><span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">Cloudflare</span><span class="tag">NAS</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="log-sec" id="log">
+  <div class="rk-wrap">
+    <div class="sec-hd"><h2 class="sec-hd-label">Timeline</h2></div>
+    <ul class="tl-list">
+      <li class="tl-entry"><span class="tl-year">2026</span><div><h3>Build Nepal Hackathon</h3><p>Built ARGUS with a team of four at Mid-Valley International College.</p><a href="argus.html">View project</a></div></li>
+      <li class="tl-entry"><span class="tl-year">2024</span><div><h3>Yantra Science 9.0</h3><p>National-level science and technology exhibition.</p></div></li>
+      <li class="tl-entry"><span class="tl-year">2023</span><div><h3>FIRST Global Challenge</h3><p>Represented Nepal on the international robotics stage.</p><a href="fgc.html">View</a></div></li>
+      <li class="tl-entry"><span class="tl-year">2023</span><div><h3>Class 9 Science Exhibition</h3><p>Presented hardware and electronics projects.</p><a href="class9-exhibition.html">View</a></div></li>
+      <li class="tl-entry"><span class="tl-year">2022</span><div><h3>Advance College Robotics Exhibition</h3><p>Built and demonstrated a robo-scooter.</p><a href="advance-college.html">View</a></div></li>
+      <li class="tl-entry"><span class="tl-year">2022</span><div><h3>Sikai Chautari Exhibition</h3><p>Robotics and electronics at a school learning fair.</p><a href="sikai-chautari.html">View</a></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact-sec" id="contact">
+  <div class="rk-wrap">
+    <h2 class="contact-big">Let's build something.</h2>
+    <div class="contact-grid">
+      <div class="contact-row"><span class="lbl">Email</span><a href="mailto:raunakkushwaha077@gmail.com">raunakkushwaha077@gmail.com</a></div>
+      <div class="contact-row"><span class="lbl">Phone</span><a href="tel:+9779703510556">+977 970 351 0556</a></div>
+      <div class="contact-row"><span class="lbl">GitHub</span><a href="https://github.com/0xwrdo" target="_blank" rel="noopener">github.com/0xwrdo</a></div>
+      <div class="contact-row"><span class="lbl">Site</span><a href="https://raunakkushwaha.tech" target="_blank" rel="noopener">raunakkushwaha.tech</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="rk-footer">
+  <span>© <span class="yr"></span> Raunak Kushwaha, Kathmandu, Nepal</span>
+  <div class="rk-footer-links">
+    <a href="https://github.com/0xwrdo" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:raunakkushwaha077@gmail.com">Email</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+<script>document.querySelectorAll('.yr').forEach(function(el){el.textContent=new Date().getFullYear()});</script>
+</body>
+</html>

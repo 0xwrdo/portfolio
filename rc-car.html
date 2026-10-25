@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>21V RC Car | Raunak Kushwaha</title>
+<meta name="description" content="Custom-rebuilt RC car on a BTS7960 driver and FlySky FS-i6 radio — 21V, ~2km range.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F4F0">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<nav class="rk-nav">
+  <a href="index.html" class="rk-logo">Raunak Kushwaha</a>
+  <ul class="rk-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+<header class="pg-header">
+  <div class="rk-wrap">
+    <div class="pg-breadcrumb" data-reveal><a href="index.html">← Home</a></div>
+    <h1 class="pg-title" data-reveal style="--d:.05s">21V RC <span>Car</span></h1>
+    <p class="pg-desc" data-reveal style="--d:.1s">Rebuilt from scratch on a BTS7960 motor driver and FlySky FS-i6 radio system — 21V pack, ~2km range, switchable power modes.</p>
+    <div class="pg-meta" data-reveal style="--d:.15s"><span class="pg-tag">Arduino</span><span class="pg-tag">BTS7960</span><span class="pg-tag">FlySky FS-i6</span><span class="pg-tag">21V</span><span class="pg-tag">~2km Range</span></div>
+  </div>
+</header>
+<section class="content-sec"><div class="rk-wrap">
+<p class="sec-label" data-reveal style="--d:0s">Specs</p>
+<ul class="skill-rows" data-reveal><li class="skill-row"><span class="skill-row-name">Motor Driver</span><span class="skill-row-desc">BTS7960 dual H-bridge — handles high current without burning up.</span></li><li class="skill-row"><span class="skill-row-name">Radio</span><span class="skill-row-desc">FlySky FS-i6 6-channel transmitter / FS-iA6B receiver. ~2km reliable range.</span></li><li class="skill-row"><span class="skill-row-name">Power</span><span class="skill-row-desc">21V LiPo pack with switchable power modes via Arduino.</span></li><li class="skill-row"><span class="skill-row-name">Control</span><span class="skill-row-desc">Custom Arduino sketch handling throttle mixing, power mode switching, and failsafe.</span></li></ul>
+</div></section><section class="content-sec"><div class="rk-wrap">
+<p class="sec-label" data-reveal style="--d:0s">Gallery</p>
+<div class="gallery" data-reveal><div class="gallery-item"><img src="assets/rc-car-v2/01-chassis.jpg" alt="RC Car Build" loading="lazy"></div>
+<div class="gallery-item"><img src="assets/rc-car-v2/02-electronics.jpg" alt="RC Car Build" loading="lazy"></div>
+<div class="gallery-item"><img src="assets/rc-car-v2/03-wiring.jpg" alt="RC Car Build" loading="lazy"></div>
+<div class="gallery-item"><img src="assets/rc-car-v2/04-build.jpg" alt="RC Car Build" loading="lazy"></div></div>
+</div></section>
+<footer class="rk-footer">
+  <span>© <span class="yr"></span> Raunak Kushwaha — Kathmandu, Nepal 🇳🇵</span>
+  <div class="rk-footer-links">
+    <a href="https://github.com/0xwrdo" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:raunakkushwaha077@gmail.com">Email</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+<script>
+(function(){
+  const nav=document.getElementById('rkNav');
+  window.addEventListener('scroll',()=>nav&&nav.classList.toggle('scrolled',scrollY>30),{passive:true});
+  if(nav) nav.classList.toggle('scrolled',scrollY>30);
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  document.querySelectorAll('.yr').forEach(el=>el.textContent=new Date().getFullYear());
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});});
+  });
+})();
+</script>
+</body>
+</html>

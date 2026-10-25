@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FPV Drone Engineering | Raunak Kushwaha</title>
+<meta name="description" content="FPV drone builds by Raunak Kushwaha: frame assembly, flight controller tuning, and telemetry, all done by hand.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F4F0">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<nav class="rk-nav">
+  <a href="index.html" class="rk-logo">Raunak Kushwaha</a>
+  <ul class="rk-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+<header class="pg-header">
+  <div class="rk-wrap">
+    <div class="pg-breadcrumb" data-reveal><a href="index.html">← Home</a></div>
+    <h1 class="pg-title" data-reveal style="--d:.05s">Drone <span>Engineering</span></h1>
+    <p class="pg-desc" data-reveal style="--d:.1s">Building and tuning FPV drones from scratch — frame assembly, flight controller PID tuning, power systems, and telemetry. All done by hand.</p>
+    <div class="pg-meta" data-reveal style="--d:.15s"><span class="pg-tag">FPV</span><span class="pg-tag">Betaflight</span><span class="pg-tag">ArduPilot</span><span class="pg-tag">LiPo</span><span class="pg-tag">Electronics</span></div>
+  </div>
+</header>
+<section class="content-sec"><div class="rk-wrap">
+<p class="sec-label" data-reveal style="--d:0s">Core skills</p>
+<ul class="skill-rows" data-reveal><li class="skill-row"><span class="skill-row-name">Custom Frames</span><span class="skill-row-desc">Lightweight, durable frames optimised for specific flight profiles and payloads.</span></li><li class="skill-row"><span class="skill-row-name">Flight Controllers</span><span class="skill-row-desc">PID tuning on Betaflight and ArduPilot for stable, responsive flight.</span></li><li class="skill-row"><span class="skill-row-name">Telemetry & FPV</span><span class="skill-row-desc">Long-range radio links and low-latency video transmission for real-time control.</span></li><li class="skill-row"><span class="skill-row-name">Power Systems</span><span class="skill-row-desc">LiPo battery management and ESC/motor optimisation for maximum efficiency.</span></li><li class="skill-row"><span class="skill-row-name">Aeronautics</span><span class="skill-row-desc">Lift, drag, and thrust principles applied to improve stability and endurance.</span></li></ul>
+</div></section><section class="content-sec"><div class="rk-wrap">
+<p class="sec-label" data-reveal style="--d:0s">Build Gallery</p>
+<div class="gallery" data-reveal><div class="gallery-item"><img src="drone1.jpg" alt="FPV Drone Build" loading="lazy"></div><div class="gallery-item"><img src="drone2.jpg" alt="FPV Drone Build" loading="lazy"></div><div class="gallery-item"><img src="drone3.jpg" alt="FPV Drone Build" loading="lazy"></div><div class="gallery-item"><img src="drone4.jpg" alt="FPV Drone Build" loading="lazy"></div></div>
+</div></section>
+<footer class="rk-footer">
+  <span>© <span class="yr"></span> Raunak Kushwaha — Kathmandu, Nepal 🇳🇵</span>
+  <div class="rk-footer-links">
+    <a href="https://github.com/0xwrdo" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:raunakkushwaha077@gmail.com">Email</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+<script>
+(function(){
+  const nav=document.getElementById('rkNav');
+  window.addEventListener('scroll',()=>nav&&nav.classList.toggle('scrolled',scrollY>30),{passive:true});
+  if(nav) nav.classList.toggle('scrolled',scrollY>30);
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  document.querySelectorAll('.yr').forEach(el=>el.textContent=new Date().getFullYear());
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});});
+  });
+})();
+</script>
+</body>
+</html>

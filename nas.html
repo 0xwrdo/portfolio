@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Raspberry Pi NAS | Raunak Kushwaha</title>
+<meta name="description" content="A custom-built NAS on Raspberry Pi for automated local and remote backups.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F4F0">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<nav class="rk-nav">
+  <a href="index.html" class="rk-logo">Raunak Kushwaha</a>
+  <ul class="rk-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+<header class="pg-header">
+  <div class="rk-wrap">
+    <div class="pg-breadcrumb" data-reveal><a href="index.html">← Home</a></div>
+    <h1 class="pg-title" data-reveal style="--d:.05s">Raspberry Pi <span>NAS</span></h1>
+    <p class="pg-desc" data-reveal style="--d:.1s">A custom-built Network Attached Storage solution for automated local and remote backups. Runs headless 24/7.</p>
+    <div class="pg-meta" data-reveal style="--d:.15s"><span class="pg-tag">Raspberry Pi</span><span class="pg-tag">OpenMediaVault</span><span class="pg-tag">Samba</span><span class="pg-tag">rsync</span><span class="pg-tag">Always On</span></div>
+  </div>
+</header>
+<section class="content-sec"><div class="rk-wrap">
+<p class="sec-label" data-reveal style="--d:0s">Setup</p>
+<ul class="skill-rows" data-reveal><li class="skill-row"><span class="skill-row-name">Hardware</span><span class="skill-row-desc">Raspberry Pi 4 with USB-attached HDDs in a custom enclosure with active cooling.</span></li><li class="skill-row"><span class="skill-row-name">OS & Software</span><span class="skill-row-desc">OpenMediaVault on top of Raspberry Pi OS for a clean NAS dashboard.</span></li><li class="skill-row"><span class="skill-row-name">File Sharing</span><span class="skill-row-desc">Samba shares for Windows/Mac/Linux access across the local network.</span></li><li class="skill-row"><span class="skill-row-name">Backups</span><span class="skill-row-desc">rsync cron jobs for automated incremental local and remote backups.</span></li><li class="skill-row"><span class="skill-row-name">Remote Access</span><span class="skill-row-desc">Exposed selectively via Cloudflare Tunnel — no raw port forwarding.</span></li></ul>
+</div></section><section class="content-sec"><div class="rk-wrap">
+<p class="sec-label" data-reveal style="--d:0s">Gallery</p>
+<div class="gallery" data-reveal><div class="gallery-item"><img src="nas1 (1).jpg" alt="Pi NAS build" loading="lazy"></div><div class="gallery-item"><img src="nas1 (2).jpg" alt="Pi NAS build" loading="lazy"></div></div>
+</div></section>
+<footer class="rk-footer">
+  <span>© <span class="yr"></span> Raunak Kushwaha — Kathmandu, Nepal 🇳🇵</span>
+  <div class="rk-footer-links">
+    <a href="https://github.com/0xwrdo" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:raunakkushwaha077@gmail.com">Email</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+<script>
+(function(){
+  const nav=document.getElementById('rkNav');
+  window.addEventListener('scroll',()=>nav&&nav.classList.toggle('scrolled',scrollY>30),{passive:true});
+  if(nav) nav.classList.toggle('scrolled',scrollY>30);
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  document.querySelectorAll('.yr').forEach(el=>el.textContent=new Date().getFullYear());
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});});
+  });
+})();
+</script>
+</body>
+</html>
